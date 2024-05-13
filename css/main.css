@@ -4,27 +4,22 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Manrope";
   src: url("./assets/fonts/Manrope-Bold.ttf") format(truetype);
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Fraunces";
   src: url("./assets/fonts/Fraunces_144pt-SemiBold.ttf") format(truetype);
   font-weight: 600;
   font-style: normal;
 }
-
 .fraunces-font {
   font-family: "Fraunces", serif;
   font-optical-sizing: auto;
-  font-variation-settings:
-    "SOFT" 0,
-    "WONK" 0;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
 }
 
 .manrope-font {
@@ -68,4 +63,4 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-}
+}/*# sourceMappingURL=main.css.map */
