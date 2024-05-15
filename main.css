@@ -1,0 +1,428 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope-Regular.ttf") format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope-Bold.ttf") format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/Fraunces_144pt-SemiBold.ttf") format(truetype);
+  font-weight: 600;
+  font-style: normal;
+}
+.fraunces-font {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+
+.manrope-font {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: inherit;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.header {
+  color: white;
+  background-image: url(./assets/images/bac-image.png);
+  background-repeat: no-repeat;
+  background-size: 100% 470px;
+}
+.header .header-wrapper {
+  padding: 32px 16px;
+  width: 100%;
+  margin: auto;
+}
+.header .header-wrapper .logo {
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+.header .header-wrapper .logo a {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  border-bottom: 3px solid #44FFA1;
+}
+.header .header-wrapper .title {
+  text-align: center;
+}
+.header .header-wrapper .title h1 {
+  text-align: center;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.header .header-wrapper .title h1 span {
+  border-bottom: 2px solid #44FFA1;
+}
+.header .header-wrapper .title .btn {
+  background-color: #44FFA1;
+  width: 133px;
+  height: 55px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #24053E;
+}
+.header .header-wrapper .title .btn:hover {
+  color: #44FFA1;
+  background-color: #24053E;
+  border: 1px solid #44FFA1;
+}
+.header .header-wrapper .phone-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 64px;
+}
+.header .header-wrapper .phone-image img {
+  width: 320px;
+  height: 184px;
+}
+.header .header-wrapper .springs {
+  display: none;
+}
+
+.container .about {
+  margin: 0 16px;
+  text-align: center;
+}
+.container .about .section-1 {
+  margin-bottom: 72px;
+}
+.container .about .section-1 img {
+  margin-bottom: 24px;
+}
+.container .about .section-1 h2 {
+  font-weight: 600;
+  line-height: 36px;
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #24053E;
+}
+.container .about .section-1 p {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  color: #24053E;
+}
+
+.person {
+  position: relative;
+  margin: 0 16px;
+}
+.person .man-img {
+  display: flex;
+  justify-content: center;
+}
+.person .man-img img {
+  position: absolute;
+  width: 281px;
+  height: 281px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  background-color: #44FFA1;
+  z-index: 0;
+}
+.person .about-man {
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 224px;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  background-color: #24053E;
+  padding: 32px;
+}
+.person .about-man h2 {
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 600;
+}
+.person .about-man p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+.person .about-man .btn {
+  background-color: #44FFA1;
+  width: 172px;
+  height: 55px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #24053E;
+}
+.person .about-man .btn:hover {
+  color: #44FFA1;
+  background-color: #24053E;
+  border: 1px solid #44FFA1;
+}
+
+.footer {
+  position: relative;
+  top: 437px;
+}
+.footer .footer-wrapper {
+  margin-top: 200px;
+}
+.footer .footer-wrapper .img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 58px;
+}
+.footer .footer-wrapper .icons {
+  justify-content: center;
+  margin-bottom: 64px;
+}
+.footer .footer-wrapper .icons i:nth-child(2) {
+  margin: 0 28px;
+}
+.footer .footer-wrapper .icons i {
+  color: #584D62;
+  font-size: 25px;
+  transition: color 200ms;
+}
+.footer .footer-wrapper .icons i:hover {
+  color: #24053E;
+}
+
+@media (min-width: 720px) {
+  .header .header-wrapper {
+    padding: 40px;
+    padding-bottom: 0;
+  }
+  .header .header-wrapper .title h1 {
+    margin: auto;
+    margin-bottom: 39px;
+    text-align: center;
+    width: 560px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .header .header-wrapper .phone-image img {
+    width: 514px;
+    height: 296px;
+  }
+  .header .header-wrapper .springs {
+    display: block;
+  }
+  .header .header-wrapper .springs .left {
+    position: absolute;
+    width: 130px;
+    height: 214px;
+    left: -40px;
+    top: 71px;
+  }
+  .header .header-wrapper .springs .right {
+    position: absolute;
+    right: 0px;
+    top: 220px;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .container .about {
+    margin: 100px;
+  }
+  .container .about .section-1 {
+    display: flex;
+    text-align: left;
+  }
+  .container .about .section-1 .img-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .container .about .section-1 .img-wrapper img {
+    height: 46px;
+    margin-bottom: 0;
+    margin-right: 17px;
+  }
+  .person {
+    margin: auto;
+    padding: 0 16px;
+    width: 600px;
+  }
+  .person .man-img img {
+    position: absolute;
+    left: 0;
+    width: 281px;
+    height: 281px;
+  }
+  .person .about-man {
+    background-image: url(./assets/images/spring-rotate.png);
+    background-position: 250px 250px;
+    background-repeat: no-repeat;
+    text-align: left;
+    position: absolute;
+    top: 200px;
+    padding: 35px;
+    width: 514px;
+    height: 375px;
+  }
+  .person .about-man h2 {
+    font-size: 56px;
+    margin-bottom: 32px;
+    line-height: 64px;
+  }
+  .person .about-man p {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+  .footer .footer-wrapper {
+    position: relative;
+    bottom: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .header {
+    background-size: 100% 670px;
+  }
+  .header .header-wrapper {
+    padding: 58px 147px;
+    padding-bottom: 0;
+  }
+  .header .header-wrapper .title h1 {
+    margin: auto;
+    margin-bottom: 39px;
+    text-align: center;
+    width: 560px;
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .header .header-wrapper .phone-image img {
+    width: 767px;
+    height: 441px;
+  }
+  .header .header-wrapper .springs {
+    display: block;
+  }
+  .header .header-wrapper .springs .left {
+    position: absolute;
+    width: 180px;
+    height: 264px;
+    left: 0px;
+    top: 71px;
+  }
+  .header .header-wrapper .springs .right {
+    position: absolute;
+    right: 0px;
+    top: 220px;
+  }
+  .container .about {
+    display: flex;
+  }
+  .container .about .section-1:nth-child(2) {
+    margin: 0 26px;
+  }
+  .container .about .section-1 {
+    display: block;
+    text-align: center;
+  }
+  .container .about .section-1 .img-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .container .about .section-1 .img-wrapper img {
+    height: 56px;
+    margin-bottom: 56px;
+  }
+  .container .about .section-1 div h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 28px;
+  }
+  .container .about .section-1 div p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .person {
+    margin: auto;
+    padding: 0 16px;
+    width: 912px;
+  }
+  .person .man-img img {
+    position: absolute;
+    left: 0;
+    width: 477px;
+    height: 477px;
+  }
+  .person .about-man {
+    background-image: url(./assets/images/spring-rotate.png);
+    background-position: 450px 250px;
+    background-repeat: no-repeat;
+    position: absolute;
+    text-align: left;
+    right: 0;
+    top: 307px;
+    padding: 65px;
+    width: 760px;
+  }
+  .person .about-man h2 {
+    font-size: 56px;
+    margin-bottom: 32px;
+    line-height: 64px;
+  }
+  .person .about-man p {
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+  .footer .footer-wrapper {
+    margin-top: 350px;
+  }
+}/*# sourceMappingURL=main.css.map */

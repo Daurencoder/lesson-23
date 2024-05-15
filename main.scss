@@ -1,3 +1,16 @@
+// VARIABLES
+$timout: 200ms;
+
+$primary-color: #1d3bcc;
+$gray: #a5a8ad;
+$gray-1: #f5f6fa;
+$light-gray: #dde3f0;
+$yellow: #ffcc00;
+$red: #eb2343;
+
+$aspectRatio: 767 / 441;
+$aspectRatio-2: 452 / 444;
+
 @font-face {
   font-family: "Manrope";
   src: url("./assets/fonts/Manrope-Regular.ttf") format(truetype);
@@ -31,12 +44,14 @@
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
 }
-
+.flex{
+  display: flex;
+}
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   font-family: sans-serif;
+  
 }
 
 * {
@@ -68,4 +83,407 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+}
+
+//HEADER
+.header{
+  color: white;
+  background-image: url(./assets/images/bac-image.png);
+  background-repeat: no-repeat;
+  background-size: 100% 470px;
+  .header-wrapper{
+    padding: 32px 16px;
+    width: 100%;
+    margin: auto;
+      .logo{
+        justify-content: space-between;
+        margin-bottom: 64px;
+        a{
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 32px;
+          border-bottom: 3px solid #44FFA1;
+        }
+      }    
+      .title{
+        text-align: center;
+
+        h1{
+          text-align: center;
+          font-size: 50px;
+          line-height: 60px;
+          font-weight: 600;
+          margin-bottom: 40px;
+          span{
+            border-bottom: 2px solid #44FFA1;
+          }
+        }
+        .btn{
+          background-color: #44FFA1;
+          width: 133px;
+          height: 55px;
+          margin-bottom: 40px;
+
+          font-size: 16px;
+          line-height: 32px;
+          font-weight: 700;
+          color: #24053E;
+          &:hover{
+            color: #44FFA1;
+            background-color: #24053E;
+            border: 1px solid #44FFA1;
+          }
+        }
+        
+      }
+      .phone-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 64px;
+        img {
+          width: 320px;
+          height: 184px;
+        }
+      }
+    .springs{
+      display: none;
+    }
+  }
+}
+
+.container{
+  //ABOUT
+  .about{
+    margin: 0 16px;
+    text-align: center;
+    .section-1{
+      margin-bottom: 72px;
+      img{
+        margin-bottom: 24px;
+      }
+      h2{
+        font-weight: 600;
+        line-height: 36px;
+        font-size: 28px;
+        margin-bottom: 16px;
+        color: #24053E;
+      }
+      p{
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: normal;
+        margin-bottom: 40px;
+        color: #24053E;
+      }
+    }
+  }
+}
+//PERSON
+.person{
+  position: relative;
+  margin: 0 16px;
+  .man-img{
+   display: flex;
+   justify-content: center;
+    img {
+      position: absolute;
+      width: 281px;
+      height: 281px;
+      object-fit: cover;
+      border-radius: 50%;
+      background-color: #44FFA1;
+      z-index: 0;
+    }
+  }
+  .about-man{
+    // background-image: url(./assets/images/spring-rotate.png);
+    // background-position: 0 20px;
+    // background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    width: fit-content;
+    top: 224px;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    background-color: #24053E;
+    padding: 32px;
+    h2{
+      margin-bottom: 16px;
+      font-size: 32px;
+      line-height: 48px;
+      font-weight: 600;
+    }
+    p{
+      font-size: 16px;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
+    .btn{
+      background-color: #44FFA1;
+      width: 172px;
+      height: 55px;
+
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: 700;
+      color: #24053E;
+      &:hover{
+        color: #44FFA1;
+        background-color: #24053E;
+        border: 1px solid #44FFA1;
+      }
+    }
+  }
+}
+
+// FOOTER
+.footer{
+  position: relative;
+  top: 437px;
+
+  .footer-wrapper{
+    margin-top: 200px;
+    .img{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 58px;
+    }
+    .icons{
+      justify-content: center;
+      margin-bottom: 64px;
+      i:nth-child(2){
+        margin: 0 28px;
+      }
+      i{
+        color:#584D62;
+        font-size: 25px;
+        transition: color 200ms ;
+      }
+      i:hover{
+        color: #24053E;
+      }
+    }
+  }
+}
+@media (min-width: 720px) {
+  .header{
+    .header-wrapper{
+      padding: 40px ;
+      padding-bottom: 0 ;
+      .title{
+        h1{
+          margin: auto;
+          margin-bottom: 39px;
+          text-align: center;
+          width: 560px;
+          font-size: 60px;
+          line-height: 60px;
+        }
+      }
+      .phone-image{
+        img{
+          width: 514px;
+          height: 296px;
+        }
+      }
+      .springs{
+        display: block;
+        .left{
+          position: absolute;
+          width: 130px;
+          height: 214px;
+          left: -40px;
+          top: 71px;
+        }
+        .right{
+          position: absolute;
+          right: 0px;
+          top: 220px;
+        }
+      }
+    }
+  }
+  .container{
+    padding: 0 40px;
+    .about{
+      margin: 100px;
+      .section-1{
+        display: flex;
+        text-align: left;
+        .img-wrapper{
+          display: flex;
+          align-items: center;
+          img{
+            height: 46px;
+            margin-bottom: 0;
+            margin-right: 17px;
+          }
+        }
+      }
+    }
+  }
+  .person{
+    margin: auto;
+    padding: 0 16px;
+    width: 600px;
+    .man-img{
+      img{
+        position: absolute;
+        left: 0;
+        width: 281px;
+        height: 281px;
+
+      }
+    }
+    .about-man{
+      // BAC-IMAGE
+      background-image: url(./assets/images/spring-rotate.png);
+      background-position: 250px 250px;
+      background-repeat: no-repeat;
+
+      text-align: left;
+      position: absolute;
+      top: 200px; 
+      padding: 35px;
+      width: 514px;
+      height: 375px;
+      h2{
+        font-size: 56px;
+        margin-bottom: 32px;
+        line-height: 64px;
+      }
+      p{
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+  .footer{
+    .footer-wrapper{
+      position: relative;
+      bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .header{
+    background-size: 100% 670px;
+    .header-wrapper{
+      padding: 58px 147px ;
+      padding-bottom: 0 ;
+      .title{
+        h1{
+          margin: auto;
+          margin-bottom: 39px;
+          text-align: center;
+          width: 560px;
+          font-size: 80px;
+          line-height: 80px;
+        }
+      }
+      .phone-image{
+        img{
+          width: 767px;
+          height: 441px;
+        }
+      }
+      .springs{
+        display: block;
+        .left{
+          position: absolute;
+          width: 180px;
+          height: 264px;
+          left: 0px;
+          top: 71px;
+        }
+        .right{
+          position: absolute;
+          right: 0px;
+          top: 220px;
+        }
+      }
+    }
+  }
+
+  .container{
+    .about{
+      display: flex;
+      .section-1:nth-child(2){
+        margin: 0 26px;
+      }
+      .section-1{
+        display: block;
+        text-align: center;
+        .img-wrapper{
+          display: flex;
+          justify-content: center ;
+            img{
+              height: 56px;
+              margin-bottom: 56px;
+            } 
+        }
+        div{
+          h2{
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 28px;
+          }
+          p{
+            font-size: 18px;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+  .person{
+    margin: auto;
+    padding: 0 16px;
+    width: 912px;
+    .man-img{
+      img{
+        position: absolute;
+        left: 0;
+        width: 477px;
+        height: 477px;
+
+      }
+    }
+    .about-man{
+      // BAC-IMAGE
+      background-image: url(./assets/images/spring-rotate.png);
+      background-position: 450px 250px;
+      background-repeat: no-repeat;
+
+      position: absolute;
+      text-align: left;
+      right: 0;
+      top: 307px; 
+      padding: 65px;
+      width: 760px;
+      h2{
+        font-size: 56px;
+        margin-bottom: 32px;
+        line-height: 64px;
+      }
+      p{
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+  .footer{
+    .footer-wrapper{
+      margin-top: 350px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+ 
 }
