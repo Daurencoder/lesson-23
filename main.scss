@@ -1,59 +1,34 @@
-// VARIABLES
-$timout: 200ms;
-
-$primary-color: #1d3bcc;
-$gray: #a5a8ad;
-$gray-1: #f5f6fa;
-$light-gray: #dde3f0;
-$yellow: #ffcc00;
-$red: #eb2343;
-
-$aspectRatio: 767 / 441;
-$aspectRatio-2: 452 / 444;
-
+$primary-color: #13183f;
 @font-face {
-  font-family: "Manrope";
-  src: url("./assets/fonts/Manrope-Regular.ttf") format(truetype);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Manrope";
-  src: url("./assets/fonts/Manrope-Bold.ttf") format(truetype);
+  font-family: "Plus Jakarta Sans";
+  src: url("./assets/PlusJakartaSans-Bold.ttf") format("truetype");
+  font-display: swap;
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Fraunces";
-  src: url("./assets/fonts/Fraunces_144pt-SemiBold.ttf") format(truetype);
-  font-weight: 600;
+  font-family: "Plus Jakarta Sans";
+  src: url("./assets/PlusJakartaSans-ExtraBold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 800;
   font-style: normal;
 }
-
-.fraunces-font {
-  font-family: "Fraunces", serif;
-  font-optical-sizing: auto;
-  font-variation-settings:
-    "SOFT" 0,
-    "WONK" 0;
-}
-
-.manrope-font {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-}
-.flex{
-  display: flex;
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("./assets/PlusJakartaSans-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
 }
 body {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-  
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: linear-gradient(#FFFFFF, #F0F1FF) ;
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -61,21 +36,17 @@ body {
   border: none;
   color: inherit;
 }
-
 a {
   text-decoration: none;
 }
-
 button {
   background-color: inherit;
   cursor: pointer;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 h1,
 h2,
 h3,
@@ -84,406 +55,361 @@ h5,
 h6 {
   font-weight: normal;
 }
-
-//HEADER
-.header{
+.container {
+  width: 100%;
+  // tablet container padding: 80px
+  // original max-width: 1110px
+  max-width: 1190px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+}
+// We have more button elements, therefore we need to use single class for theme
+.btn {
   color: white;
-  background-image: url(./assets/images/bac-image.png);
-  background-repeat: no-repeat;
-  background-size: 100% 470px;
-  .header-wrapper{
-    padding: 32px 16px;
-    width: 100%;
-    margin: auto;
-      .logo{
-        justify-content: space-between;
-        margin-bottom: 64px;
-        a{
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 32px;
-          border-bottom: 3px solid #44FFA1;
-        }
-      }    
-      .title{
-        text-align: center;
-
-        h1{
-          text-align: center;
-          font-size: 50px;
-          line-height: 60px;
-          font-weight: 600;
-          margin-bottom: 40px;
-          span{
-            border-bottom: 2px solid #44FFA1;
-          }
-        }
-        .btn{
-          background-color: #44FFA1;
-          width: 133px;
-          height: 55px;
-          margin-bottom: 40px;
-
-          font-size: 16px;
-          line-height: 32px;
-          font-weight: 700;
-          color: #24053E;
-          &:hover{
-            color: #44FFA1;
-            background-color: #24053E;
-            border: 1px solid #44FFA1;
-          }
-        }
-        
-      }
-      .phone-image {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 64px;
-        img {
-          width: 320px;
-          height: 184px;
-        }
-      }
-    .springs{
-      display: none;
+  border-radius: 100px;
+  padding: 14px 32px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: all 300ms;
+  &.btn-primary {
+    background-color: $primary-color;
+    &:hover {
+      background-color: #666ca3;
+    }
+  }
+  &.btn-secondary {
+    background-image: linear-gradient(#ff6f48, #f02aa6);
+    &:hover {
+      opacity: 50%;
     }
   }
 }
-
-.container{
-  //ABOUT
-  .about{
-    margin: 0 16px;
-    text-align: center;
-    .section-1{
-      margin-bottom: 72px;
-      img{
-        margin-bottom: 24px;
+// DESKTOP VERSION: 1301px -> screen
+.intro-section {
+  overflow: hidden;
+  // HEADER
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    margin-bottom: 87px;
+    .logo {
+      display: inline-block;
+    }
+  }
+  // CONTENT
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      width: 100%;
+      max-width: 457px;
+      .title {
+        font-size: 56px;
+        line-height: 70px;
+        font-weight: 800;
+        margin-bottom: 30px;
       }
-      h2{
-        font-weight: 600;
-        line-height: 36px;
-        font-size: 28px;
-        margin-bottom: 16px;
-        color: #24053E;
-      }
-      p{
-        font-size: 16px;
+      .description {
+        font-size: 18px;
         line-height: 28px;
-        font-weight: normal;
         margin-bottom: 40px;
-        color: #24053E;
+        color: #83869a;
+      }
+    }
+    .right {
+      padding-right: 54px;
+      .user-photo {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1008px;
+          transform: rotate(45deg);
+          transform-origin: 51% 84%;
+          border-radius: 160px;
+          background-image: linear-gradient(#4851ff, #f02aa6);
+          z-index: -1;
+        }
+        .img-wrapper {
+          display: flex;
+          align-items: flex-end;
+          width: 317px;
+          height: 560px;
+          padding-top: 77px;
+          overflow: hidden;
+          border-radius: 160px;
+          background-image: linear-gradient(#ff6f48, #f02aa6);
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        // We have two cards, thus we wrote one common class for both of theme
+        .info-card {
+          position: absolute;
+          padding: 20px 24px;
+          background-color: white;
+          box-shadow: 0 34px 54px rgba(#06168d29, 16%);
+          border-radius: 20px;
+          z-index: 10;
+          p {
+            color: #83869a;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 700;
+            margin-bottom: 2px;
+          }
+          span {
+            color: $primary-color;
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 800;
+          }
+        }
+        .card-1 {
+          width: 200px;
+          bottom: 17.5%;
+          left: -38%;
+        }
+        .card-2 {
+          width: 155px;
+          top: 18%;
+          right: -37%;
+        }
       }
     }
   }
 }
-//PERSON
-.person{
-  position: relative;
-  margin: 0 16px;
-  .man-img{
-   display: flex;
-   justify-content: center;
-    img {
-      position: absolute;
-      width: 281px;
-      height: 281px;
-      object-fit: cover;
-      border-radius: 50%;
-      background-color: #44FFA1;
-      z-index: 0;
-    }
-  }
-  .about-man{
-    // background-image: url(./assets/images/spring-rotate.png);
-    // background-position: 0 20px;
-    // background-repeat: no-repeat;
-    position: absolute;
-    right: 0;
-    width: fit-content;
-    top: 224px;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    background-color: #24053E;
-    padding: 32px;
-    h2{
-      margin-bottom: 16px;
-      font-size: 32px;
-      line-height: 48px;
-      font-weight: 600;
+
+.info-wrapper{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  margin-top: 86px;
+  .card-item{
+    background-color: white;
+    padding: 0 32px 40px 32px;
+    border-radius: 20px;
+    h3{
+      padding: 32px 0 24px;
+      font-weight: 800;
+      line-height: 31px;
+      font-size: 24px;
+      color: #13183F;
     }
     p{
-      font-size: 16px;
+      color: #83869A;
+      font-weight: normal;
+      font-size: 18px;
       line-height: 28px;
       margin-bottom: 24px;
     }
-    .btn{
-      background-color: #44FFA1;
-      width: 172px;
-      height: 55px;
-
-      font-size: 16px;
-      line-height: 32px;
+    a{
+      color: #F74780;
       font-weight: 700;
-      color: #24053E;
+      line-height: 28px;
+      font-size: 18px;
       &:hover{
-        color: #44FFA1;
-        background-color: #24053E;
-        border: 1px solid #44FFA1;
+        color: #FFA7C3;
       }
+    }
+    &:nth-child(1){
+      background: linear-gradient(#FF6F48, #F02AA6) ;
+      padding: 64px 32px 168px 32px;
+      color: white;
+      font-weight: 800;
+      line-height: 40px;
+      font-size: 32px;
+
     }
   }
+  
 }
-
-// FOOTER
-.footer{
-  position: relative;
-  top: 437px;
-
-  .footer-wrapper{
-    margin-top: 200px;
-    .img{
-      display: flex;
-      justify-content: center;
-      margin-bottom: 58px;
+.footer-wrapper{
+  margin-top: 140px;
+  background-color: #13183F;
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    .logo {
+      display: inline-block;
     }
-    .icons{
-      justify-content: center;
-      margin-bottom: 64px;
-      i:nth-child(2){
-        margin: 0 28px;
-      }
-      i{
-        color:#584D62;
-        font-size: 25px;
-        transition: color 200ms ;
-      }
-      i:hover{
-        color: #24053E;
-      }
-    }
-  }
-}
-@media (min-width: 720px) {
-  .header{
-    .header-wrapper{
-      padding: 40px ;
-      padding-bottom: 0 ;
-      .title{
-        h1{
-          margin: auto;
-          margin-bottom: 39px;
-          text-align: center;
-          width: 560px;
-          font-size: 60px;
-          line-height: 60px;
+    .btn {
+      color: white;
+      border-radius: 100px;
+      padding: 14px 32px;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 700;
+      text-transform: capitalize;
+      transition: all 300ms;
+      background: linear-gradient(#4851FF, #F02AA6);
+      &.btn {
+        background: linear-gradient(#FFA7C3);
+        &:hover {
+          opacity: 50%;
         }
       }
-      .phone-image{
+    }
+  }
+}
+
+// UI changes stats from 1300px, therefore we need to make responsive design from this dimension
+// 993px -> 1300px
+@media screen and (max-width: 1300px) {
+  .intro-section {
+    .header{
+      a{
         img{
-          width: 514px;
-          height: 296px;
+          width: 89px;
+          height: 35px;
         }
       }
-      .springs{
-        display: block;
-        .left{
-          position: absolute;
-          width: 130px;
-          height: 214px;
-          left: -40px;
-          top: 71px;
-        }
-        .right{
-          position: absolute;
-          right: 0px;
-          top: 220px;
-        }
+      .btn{
+        width: 140px;
+        height: 48px;
+        font-size: 16px;
+        padding: 9px 24px;
       }
     }
-  }
-  .container{
-    padding: 0 40px;
-    .about{
-      margin: 100px;
-      .section-1{
-        display: flex;
-        text-align: left;
-        .img-wrapper{
-          display: flex;
-          align-items: center;
-          img{
-            height: 46px;
-            margin-bottom: 0;
-            margin-right: 17px;
+    .content {
+      .left{
+        .title{
+          font-size: 40px;
+          line-height: 71px;
+          margin-bottom: 25px;
+        }
+        .description{
+          font-size: 16px;
+          line-height: 26px;
+          margin-bottom: 24px;
+        }
+        .btn-secondary{
+          width: 167px;
+          height: 56px;
+          font-size: 16px;
+          line-height: 26px;
+          
+        }
+      }
+      .right {
+        .user-photo {
+          &::after {
+            content: "";
+            transform-origin: 51% 89%;
           }
-        }
-      }
-    }
-  }
-  .person{
-    margin: auto;
-    padding: 0 16px;
-    width: 600px;
-    .man-img{
-      img{
-        position: absolute;
-        left: 0;
-        width: 281px;
-        height: 281px;
-
-      }
-    }
-    .about-man{
-      // BAC-IMAGE
-      background-image: url(./assets/images/spring-rotate.png);
-      background-position: 250px 250px;
-      background-repeat: no-repeat;
-
-      text-align: left;
-      position: absolute;
-      top: 200px; 
-      padding: 35px;
-      width: 514px;
-      height: 375px;
-      h2{
-        font-size: 56px;
-        margin-bottom: 32px;
-        line-height: 64px;
-      }
-      p{
-        font-size: 18px;
-        line-height: 32px;
-        margin-bottom: 32px;
-      }
-    }
-  }
-  .footer{
-    .footer-wrapper{
-      position: relative;
-      bottom: 0;
-    }
-  }
-}
-
-@media (min-width: 1000px) {
-  .header{
-    background-size: 100% 670px;
-    .header-wrapper{
-      padding: 58px 147px ;
-      padding-bottom: 0 ;
-      .title{
-        h1{
-          margin: auto;
-          margin-bottom: 39px;
-          text-align: center;
-          width: 560px;
-          font-size: 80px;
-          line-height: 80px;
-        }
-      }
-      .phone-image{
-        img{
-          width: 767px;
-          height: 441px;
-        }
-      }
-      .springs{
-        display: block;
-        .left{
-          position: absolute;
-          width: 180px;
-          height: 264px;
-          left: 0px;
-          top: 71px;
-        }
-        .right{
-          position: absolute;
-          right: 0px;
-          top: 220px;
-        }
-      }
-    }
-  }
-
-  .container{
-    .about{
-      display: flex;
-      .section-1:nth-child(2){
-        margin: 0 26px;
-      }
-      .section-1{
-        display: block;
-        text-align: center;
-        .img-wrapper{
-          display: flex;
-          justify-content: center ;
+          .img-wrapper{
+            width: 217px;
+            height: 382px;
+            padding-top: 52px;
             img{
-              height: 56px;
-              margin-bottom: 56px;
-            } 
-        }
-        div{
-          h2{
-            font-size: 32px;
-            line-height: 40px;
-            margin-bottom: 28px;
+              width: 238px;
+              height: 329px;
+            }
           }
-          p{
-            font-size: 18px;
-            line-height: 32px;
+          .card-1{
+            width: 155px;
+            height: 100px;
+            top: 73%;
+            .card-title{
+              font-size: 14px;
+              line-height: 28px;
+            }
+            .card-number{
+              font-size: 32px;
+              line-height: 41px;
+            }
+          }
+          .card-2 {
+            width: 105px;
+            height: 100px;
+            top: -3%;
+            right: -24%;
+            .card-title{
+              font-size: 14px;
+              line-height: 28px;
+            }
+            .card-number{
+              font-size: 32px;
+              line-height: 41px;
+            }
           }
         }
       }
     }
   }
-  .person{
-    margin: auto;
-    padding: 0 16px;
-    width: 912px;
-    .man-img{
-      img{
-        position: absolute;
-        left: 0;
-        width: 477px;
-        height: 477px;
-
-      }
-    }
-    .about-man{
-      // BAC-IMAGE
-      background-image: url(./assets/images/spring-rotate.png);
-      background-position: 450px 250px;
-      background-repeat: no-repeat;
-
-      position: absolute;
-      text-align: left;
-      right: 0;
-      top: 307px; 
-      padding: 65px;
-      width: 760px;
-      h2{
-        font-size: 56px;
-        margin-bottom: 32px;
-        line-height: 64px;
+  .info-wrapper{
+    display: grid;
+    grid-template-columns: auto auto ;
+    .card-item{
+      height: 259px;
+      h3{
+        font-size: 20px;
+        line-height: 25px;
+        padding: 24px 0 16px;
       }
       p{
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 26px;
+      }
+      &:nth-child(1){
+        font-size: 24px;
         line-height: 32px;
-        margin-bottom: 32px;
       }
     }
-  }
-  .footer{
-    .footer-wrapper{
-      margin-top: 350px;
-    }
+
   }
 }
 
-@media (min-width: 1920px) {
- 
+// MOBILE RESPONSIVE
+@media screen and (max-width: 768px) {
+  .intro-section{
+    overflow: visible;
+    .content{
+      display: block;
+      .right{
+        padding: 0;
+        padding-top: 70px;
+        .user-photo{
+          .img-wrapper{
+            margin: auto;
+            width: 329px;
+            height: 329px;
+            border-radius: 50%;
+            img{
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          .card-1{
+            left: 0;
+          }
+          .card-2{
+            right: 0;
+          }
+          &::after{
+            content: "";
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
+  .info-wrapper{
+    grid-template-columns: auto;
+  }
+  
 }

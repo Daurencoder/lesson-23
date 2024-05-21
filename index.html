@@ -3,104 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 23</title>
+    <title>Lesson 25</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./main.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header-wrapper">
-
-      <!-- HEADER -->
-      <div class="logo flex">
-        <div class="workit flex">
-          <img src="./assets/images/logo-white.png" alt="">
+    <!-- INTRO SECTION -->
+    <section class="intro-section">
+      <!-- HEADER SECTION -->
+      <div class="header container">
+        <a href="" class="logo">
+          <img src="./assets/logo.svg" alt="logo" />
+        </a>
+        <button class="btn btn-primary">get started</button>
+      </div>
+      <!-- CONTENT SECTION -->
+      <div class="content container">
+        <!-- LEFT -->
+        <div class="left">
+          <h1 class="title">Maximize skill, minimize budget</h1>
+          <p class="description">Our modern courses across a range of in-demand skills will give you the knowledge you need to live the life you want.</p>
+          <button class="btn btn-secondary">get started</button>
         </div>
-        <a href="" class="manrope-font ">Apply for access</a>
-      </div>
+        <!-- RIGHT -->
+        <div class="right">
+          <div class="user-photo">
+            <div class="img-wrapper">
+              <img src="./assets/user-img.png" alt="user photo" />
+            </div>
+            <!-- CARD-1 -->
+            <div class="info-card card-1">
+              <p class="card-title">Course hours</p>
+              <span class="card-number">1,451</span>
+            </div>
 
-      <!-- TITLE -->
-      <div class="title">
-        <h1 class="fraunces-font "> Data <span>tailored</span> to 
-          your needs.</h1>
-          <button class="btn manrope-font">Learn more</button>
-      </div>
-
-      <!-- IMAGE -->
-      <div class="phone-image">
-        <img src="./assets/images/phone.png" alt="">
-      </div>
-
-      <!-- SPRING IMAGES -->
-      <div class="springs">
-        <img src="./assets/images/spring-left.png" alt="" class="left">
-        <img src="./assets/images/spring-right.png" alt="" class="right">
-      </div>
-    </div>
-    </header>
-
-    <!-- MAIN -->
-    <main class="container">
-      <!-- ABOUT -->
-      <div class="about">
-        <!-- SECTION-1 -->
-        <div class="section-1">
-          <div class="img-wrapper">
-            <img src="./assets/images/one.png" alt="">
-          </div>
-          <div>
-            <h2 class="fraunces-font">Actionable insights</h2>
-            <p class="manrope-font">Optimize your productsa simprove customer satisfaction and stay ahead of the competition with our product data analytics.</p>
-          </div>
-        </div>
-        <!-- SECTION-2 -->
-        <div class="section-1">
-          <div class="img-wrapper">
-            <img src="./assets/images/two.png" alt="">
-          </div>
-          <div>
-          <h2 class="fraunces-font">Data-driven decisions</h2>
-          <p class="manrope-font">Make data-driven decisions with our product data analytics. Our AI-generated reports help you unlock insights hidden in your product data.</p>
+            <!-- CARD-2 -->
+            <div class="info-card card-2">
+              <p class="card-title">Members</p>
+              <span class="card-number">29k</span>
             </div>
           </div>
-        <!-- SECTION-3 -->
-        <div class="section-1">
-          <div class="img-wrapper">
-            <img src="./assets/images/three.png" alt="">
-          </div>
-          <div>
-          <h2 class="fraunces-font">Always affordable</h2>
-          <p class="manrope-font">Always affordable pricing that scales with your business. Get top-quality product data analytics services without hidden costs or unexpected fees.</p>
-          </div>
         </div>
       </div>
-    </main>
-    <!-- PERSON -->
-    <div class="person">
-     <div class="man-img">
-       <img src="./assets/images/user.png" alt="">
-     </div>
-     <!-- INFORMATION OF PERSON -->
-     <div class="about-man">
-       <h2 class="fraunces-font">Be the first to test</h2>
-       <p class="manrope-font">Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a beta tester for our app and kickstart your company. Apply for access below and I’ll be in touch to schedule a call.</p>
-       <button class="btn">Apply for access</button>
-     </div>
-    </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-wrapper">
+    <!-- INFO CARDS -->
+    <section class="info-wrapper container">
+      <div class="title-card card-item">
+        <h2>Check out our most popular courses!</h2>
+      </div>
+      <!-- CARD-1 -->
+      <div class="card-item">
         <div class="img">
-          <img src="./assets/images/logo.svg" alt="">
+          <img src="./assets/runner.png" alt="">
         </div>
-        
-        <div class="icons flex">
-          <i class="fa-brands fa-square-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
+        <h3>Animation</h3>
+        <p>Learn the latest animation techniques to create stunning motion design and captivate your audience.</p>
+        <a href="">Get Started</a>
+      </div>
+      <!-- CARD-2 -->
+      <div class="card-item">
+        <div class="img">
+          <img src="./assets/design.png" alt="">
         </div>
+        <h3>Animation</h3>
+        <p>Learn the latest animation techniques to create stunning motion design and captivate your audience.</p>
+        <a href="">Get Started</a>
+      </div>
+      <!-- CARD-3 -->
+      <div class="card-item">
+        <div class="img">
+          <img src="./assets/photograp.png" alt="">
+        </div>
+        <h3>Animation</h3>
+        <p>Learn the latest animation techniques to create stunning motion design and captivate your audience.</p>
+        <a href="">Get Started</a>
+      </div>
+      <!-- CARD-4 -->
+      <div class="card-item">
+        <div class="img">
+          <img src="./assets/shop.png" alt="">
+        </div>
+        <h3>Animation</h3>
+        <p>Learn the latest animation techniques to create stunning motion design and captivate your audience.</p>
+        <a href="">Get Started</a>
+      </div>
+      <!-- CARD-5 -->
+      <div class="card-item">
+        <div class="img">
+          <img src="./assets/shop.png" alt="">
+        </div>
+        <h3>Animation</h3>
+        <p>Learn the latest animation techniques to create stunning motion design and captivate your audience.</p>
+        <a href="">Get Started</a>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer-wrapper ">
+      <div class="container">
+        <div class="footer ">
+            <div class="logo">
+              <img src="./assets/logo-white.png" alt="">
+            </div>
+            <div class="btn-wrapper">
+              <button class="btn">
+                Get Started
+              </button>
+            </div>
+          </div>
       </div>
     </footer>
   </body>
