@@ -1,0 +1,956 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+main {
+  flex-grow: 1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: inherit;
+  cursor: pointer;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.flex {
+  display: flex;
+}
+
+.header {
+  max-width: 1450px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .nav-list {
+  display: none;
+  align-items: center;
+  gap: 60px;
+  margin: auto;
+}
+.header .nav-list .nav-link {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+  transition: color 200ms;
+}
+.header .nav-list .nav-link:hover {
+  color: #1d3bcc;
+}
+.header .btn-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+.header .btn-group .phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 5%;
+  color: #1d3bcc;
+}
+.header .btn-group .lang-btn-group {
+  display: flex;
+  align-items: center;
+  color: #1d3bcc;
+  font-size: 12px;
+  line-height: 15px;
+}
+.header .btn-group .lang-btn-group button:first-child {
+  padding-right: 8px;
+  border-right: 1px solid #dde3f0;
+}
+.header .btn-group .lang-btn-group button:last-child {
+  padding-left: 8px;
+}
+
+.container {
+  max-width: 1450px;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 32px auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #7800ff;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.card .left {
+  color: white;
+  padding: 20px;
+}
+.card .left .title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.card .left .desc {
+  line-height: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.card .left .film-info {
+  display: flex;
+  flex-direction: column;
+}
+.card .left .film-info .statistics {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.card .left .film-info .statistics .statistics-wrapper .statistics-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.card .left .film-info .statistics .statistics-wrapper .statistics-info img {
+  width: 20px;
+}
+.card .left .film-info .statistics .statistics-wrapper .statistics-info div p:first-child {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+}
+.card .left .film-info .statistics .statistics-wrapper .statistics-info div p:last-child {
+  font-size: 8px;
+  line-height: 10px;
+  font-weight: 500;
+}
+.card .left .film-info .statistics .statistics-wrapper .statistics-info:first-child {
+  margin-bottom: 16px;
+}
+.card .left .film-info .film-owner {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.card .left .film-info .film-owner .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+}
+.card .left .film-info .film-owner .more-tv-img {
+  width: 54px;
+}
+.card .left .film-info .film-owner .amediatika-img {
+  width: 126px;
+}
+.card .left .info {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.card .left .btn {
+  padding: 18px 78px;
+  color: #020105;
+  background-color: #ffcc00;
+  border-radius: 100px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.card .right {
+  position: relative;
+}
+.card .right .picture {
+  position: relative;
+  padding-bottom: 89.5454545455%;
+  width: 100%;
+  overflow: hidden;
+}
+.card .right .picture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card .right .qr-code {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  width: 56px;
+}
+.card .right .qr-code img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container-2 {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 32px auto;
+  background-color: #061F99;
+}
+.container-2 .title {
+  color: white;
+  max-width: 1450px;
+  margin: auto;
+}
+.container-2 .title .left {
+  padding: 20px;
+}
+.container-2 .title .left .discount {
+  padding: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  background-color: #FFCC00;
+  color: #020105;
+  margin: 20px 0;
+}
+.container-2 .title .left .title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  margin: 4px 0;
+}
+.container-2 .title .left .about {
+  font-weight: 500;
+  line-height: 20px;
+  margin: 10px 0;
+}
+.container-2 .title .left .btn {
+  display: none;
+  width: 165px;
+  height: 60px;
+  border-radius: 100px;
+  background-color: #EB2343;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+}
+.container-2 .title .right {
+  position: relative;
+}
+.container-2 .title .right .img {
+  position: relative;
+  padding-bottom: 79.7101449275%;
+  width: 100%;
+  overflow: hidden;
+}
+.container-2 .title .right .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-2 .title .right .btn {
+  width: 165px;
+  height: 60px;
+  border-radius: 100px;
+  background-color: #EB2343;
+  padding: 0 30px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  margin: 20px;
+}
+
+.container-3 {
+  text-align: center;
+}
+.container-3 h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 20px 0;
+}
+.container-3 .payment {
+  max-width: 1410px;
+  margin: auto;
+}
+.container-3 .payment .card-1 img {
+  height: 150px;
+  margin-bottom: 8px;
+}
+.container-3 .payment .card-1 h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 4px;
+}
+.container-3 .payment .card-1 p {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.container-4 {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 32px auto;
+  background-color: #F5F6FA;
+}
+.container-4 .registration {
+  max-width: 1450px;
+  margin: auto;
+}
+.container-4 .registration .left h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+.container-4 .registration .left p {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+.container-4 .registration .left .inputs .name .input input {
+  display: flex;
+  align-items: center;
+  background-image: url("./assets/user.png");
+  background-size: fill;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-position: 10px 13px;
+  border: 1px solid #E6E9F0;
+  font-size: 16px;
+  color: #081857;
+  outline: none;
+  background-color: white;
+  padding: 14px 35px;
+  gap: 8px;
+  border-radius: 16px;
+  width: 320px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+.container-4 .registration .left .inputs .name .input .input-image {
+  background-image: url("./assets/telephone.png");
+}
+.container-4 .registration .left .inputs .select .country-select select {
+  border: 1px solid #E6E9F0;
+  background-color: white;
+  width: 320px;
+  height: 48px;
+  border-radius: 16px;
+  padding: 14px 16px;
+  gap: 8px;
+  color: #081857;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 12px 0;
+}
+.container-4 .registration .left .address input {
+  background-image: url("./assets/location.png");
+  background-size: fill;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-position: 10px 13px;
+  padding: 14px 40px;
+  border: 1px solid #E6E9F0;
+  background-color: white;
+  width: 320px;
+  height: 48px;
+  border-radius: 16px;
+  padding: 14px 30px;
+  gap: 8px;
+  color: #081857;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 12px 0;
+}
+.container-4 .registration .btn {
+  width: 151px;
+  height: 60px;
+  border-radius: 100px;
+  padding: 0 30px;
+  background: linear-gradient(0.25turn, #004BFF, #1D3BCC);
+  color: white;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+  margin: 24px 0;
+}
+.container-4 .registration .right .img {
+  position: relative;
+  padding-bottom: 78.2978723404%;
+  width: 100%;
+  overflow: hidden;
+}
+.container-4 .registration .right .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #F0F3FA;
+}
+.footer .parent {
+  max-width: 1450px;
+  margin: auto;
+}
+.footer .parent .left .text h2 {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+.footer .parent .left .text .list {
+  margin-bottom: 8px;
+}
+.footer .parent .left .text .list img {
+  width: 13px;
+  height: 15px;
+  margin-right: 4px;
+}
+.footer .parent .left .text .list a {
+  align-items: center;
+  color: #1D3BCC;
+  font-size: 14px;
+  line-height: 18px;
+}
+.footer .parent .left .phone {
+  margin: 20px 0;
+}
+.footer .parent .left .phone .phone1 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  letter-spacing: 5%;
+  color: #1d3bcc;
+}
+.footer .parent .left .phone p {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #1D3BCC;
+}
+.footer .right .network {
+  margin-right: 20px;
+}
+.footer .right .network p {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.footer .right .network .pictures img {
+  margin-right: 8px;
+}
+.footer .right .appstore div img {
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #DDE3F0;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 480px) {
+  .header .btn-group {
+    gap: 64px;
+  }
+  .header .btn-group .phone {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .card .left .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .card .left .desc {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .card .right .qr-code {
+    right: 32px;
+    bottom: 32px;
+    width: 77px;
+  }
+  .container-3 {
+    padding: 0 20px;
+  }
+  .container-3 .payment {
+    text-align: start;
+  }
+  .container-3 .payment .card-1 {
+    display: flex;
+    align-items: center;
+  }
+  .container-3 .payment .card-1 img {
+    width: 120px;
+    height: 120px;
+    margin-right: 16px;
+  }
+  .container-3 .payment .card-1 .text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 8px;
+  }
+  .container-3 .payment .card-1 .text p {
+    line-height: 20px;
+  }
+  .container-4 .registration .left h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .container-4 .registration .left p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .container-4 .registration .left .inputs .name .input input {
+    width: 440px;
+    margin-bottom: 18px;
+  }
+  .container-4 .registration .left .inputs .select .country-select select {
+    width: 440px;
+  }
+  .container-4 .registration .left .inputs .address input {
+    width: 440px;
+  }
+  .footer .parent .left {
+    display: flex;
+  }
+  .footer .parent .left .text {
+    margin-right: 70px;
+  }
+  .footer .parent .left .text h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .footer .parent .left .phone .phone1 {
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 500;
+  }
+  .footer .parent .right {
+    justify-content: space-between;
+  }
+  .footer .parent .right .appstore div img {
+    width: 210px;
+    height: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .header .nav-list {
+    display: flex;
+  }
+  .header .btn-group {
+    gap: 60px;
+  }
+  .header .btn-group .toggle-btn {
+    display: none;
+  }
+  .container-2 .title {
+    display: flex;
+    align-items: center;
+  }
+  .container-2 .title .left .discount {
+    padding: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .container-2 .title .left .title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+  .container-2 .title .left .about {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  .container-2 .title .left .btn {
+    display: block;
+  }
+  .container-2 .title .right {
+    display: flex;
+    justify-content: right;
+    width: 578px;
+    max-width: calc(100% - 450px);
+    max-height: 516px;
+  }
+  .container-2 .title .right .img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container-2 .title .right .btn {
+    display: none;
+  }
+  .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .card {
+    flex-direction: row;
+  }
+  .card .left {
+    width: calc(100% - 354px);
+  }
+  .card .left .desc {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .card .left .film-info .statistics .statistics-wrapper .statistics-info div p:first-child {
+    font-size: 20px;
+    margin-bottom: 5px;
+    line-height: 1;
+  }
+  .card .left .film-info .statistics .statistics-wrapper .statistics-info div p:last-child {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .card .left .film-info .film-owner {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .card .left .film-info .film-owner .dot {
+    display: none;
+  }
+  .card .left .info {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 24px;
+  }
+  .card .right {
+    display: flex;
+    width: 354px;
+    align-items: flex-end;
+  }
+  .container-3 {
+    text-align: center;
+  }
+  .container-3 h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .container-3 .payment {
+    display: flex;
+    justify-content: center;
+  }
+  .container-3 .payment .card-1 {
+    display: block;
+    margin: 20px;
+  }
+  .container-3 .payment .card-1 img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+    display: block;
+    margin: auto;
+  }
+  .container-3 .payment .card-1 .text {
+    text-align: center;
+  }
+  .container-3 .payment .card-1 .text h3 {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 8px;
+  }
+  .container-3 .payment .card-1 .text p {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .container-4 .registration {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .container-4 .registration .left .title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .container-4 .registration .left .article {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .container-4 .registration .left .inputs .name .input input {
+    width: 354px;
+    margin-bottom: 12px;
+  }
+  .container-4 .registration .left .inputs .select .country-select select {
+    width: 354px;
+  }
+  .container-4 .registration .left .inputs .address input {
+    width: 354px;
+  }
+  .container-4 .registration .right {
+    position: relative;
+    width: 1600px;
+  }
+  .container-4 .registration .right .img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .footer .parent {
+    display: flex;
+  }
+  .footer .parent .left {
+    display: flex;
+  }
+  .footer .parent .left .text {
+    margin-right: 44px;
+  }
+  .footer .parent .left .phone {
+    margin-right: 43px;
+  }
+  .footer .parent .right {
+    margin-top: 20px;
+  }
+  .footer .parent .right .network {
+    margin-right: 43px;
+  }
+  .footer .parent .right .appstore div img {
+    width: 180px;
+    height: 60px;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    padding: 0 30px;
+  }
+  .container .card {
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+  .container .card .left {
+    width: 450px;
+    padding: 60px;
+  }
+  .container .card .left .title {
+    width: 458px;
+    font-size: 45px;
+    line-height: 60px;
+  }
+  .container .card .left .desc {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .container .card .left .info {
+    width: 598px;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 32px 0;
+  }
+  .container .card .left .film-info {
+    flex-direction: row;
+    width: 624px;
+  }
+  .container .card .left .film-info .film-owner {
+    height: 72px;
+    width: 192px;
+    padding-top: 17px;
+    margin-left: 20px;
+  }
+  .container .card .right {
+    width: 578px;
+    max-width: calc(100% - 450px);
+    max-height: 516px;
+  }
+  .container .card .right .qr-code {
+    width: 120px;
+    height: 120px;
+  }
+  .container-3 .payment .card-1 img {
+    margin-bottom: 24px;
+  }
+  .container-3 .payment .card-1 .text h3 {
+    font-weight: 700;
+    font-size: 20px;
+    list-style: 25px;
+    margin-bottom: 8px;
+  }
+  .container-3 .payment .card-1 .text p {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .container-4 .registration {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-4 .registration .left .title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .container-4 .registration .left .article {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .container-4 .registration .left .inputs .name {
+    display: flex;
+  }
+  .container-4 .registration .left .inputs .name .input input {
+    width: 227px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+  }
+  .container-4 .registration .left .inputs .select {
+    display: flex;
+  }
+  .container-4 .registration .left .inputs .select .country-select select {
+    width: 227px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+  }
+  .container-4 .registration .left .inputs .address input {
+    width: 470px;
+  }
+  .container-4 .registration .right {
+    position: relative;
+    width: 1600px;
+  }
+  .container-4 .registration .right .img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .footer .parent {
+    padding: 0 20px;
+    display: flex;
+    overflow: hidden;
+  }
+  .footer .parent .left .text {
+    margin-right: 270px;
+  }
+  .footer .parent .left .phone {
+    margin-right: 270px;
+  }
+  .footer .parent .right {
+    margin-top: 20px;
+  }
+  .footer .parent .right .network {
+    margin-right: 270px;
+  }
+  .footer .parent .right .appstore div img {
+    width: 180px;
+    height: 60px;
+  }
+}
+@media (min-width: 1920px) {
+  body {
+    padding: 0 255px;
+  }
+  .container-2 {
+    max-width: 1408;
+  }
+  .container-2 .title .left {
+    margin-right: 50px;
+  }
+  .container-3 h2 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 40px;
+  }
+  .container-3 .payment .card-1 img {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 24px;
+  }
+  .container-3 .payment .card-1 .text h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
+  .container-3 .payment .card-1 .text p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .footer .parent {
+    display: flex;
+  }
+  .footer .parent .left {
+    display: flex;
+  }
+  .footer .parent .left .text {
+    margin-right: 100px;
+  }
+  .footer .parent .left .phone {
+    margin-right: 201px;
+  }
+  .footer .parent .right {
+    margin-top: 20px;
+  }
+  .footer .parent .right .network {
+    margin-right: 201px;
+  }
+  .footer .parent .right .appstore {
+    display: flex;
+  }
+  .footer .parent .right .appstore div img {
+    width: 180px;
+    height: 60px;
+    margin-right: 16px;
+  }
+}/*# sourceMappingURL=main.css.map */
